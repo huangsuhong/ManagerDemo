@@ -9,19 +9,19 @@ public class UserData {
     private int userId;                       //用户ID号
     public int pwdresetFlag=0;
     //获取用户名
-    public String getUserName() {             //获取用户名
+    public String getUserName() {
         return userName;
     }
     //设置用户名
-    public void setUserName(String userName) {  //输入用户名
+    public void setUserName(String userName) {
         this.userName = userName;
     }
     //获取用户密码
-    public String getUserPwd() {                //获取用户密码
+    public String getUserPwd() {
         return userPwd;
     }
     //设置用户密码
-    public void setUserPwd(String userPwd) {     //输入用户密码
+    public void setUserPwd(String userPwd) {
         this.userPwd = userPwd;
     }
     //获取用户id
