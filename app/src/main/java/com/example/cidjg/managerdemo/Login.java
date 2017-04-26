@@ -61,9 +61,10 @@ public class Login extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login_btn_login:                            //登录界面的登录按钮
-                Intent intent_Login_to_User = new Intent(Login.this, User.class);
-               startActivity(intent_Login_to_User);
-               finish();
+//                Intent intent_Login_to_User = new Intent(Login.this, User.class);
+//               startActivity(intent_Login_to_User);
+//               finish();
+                login();
                 break;
             case R.id.login_btn_register:
                 Intent intent_login_to_register = new Intent(Login.this, Register.class);
@@ -79,7 +80,7 @@ public class Login extends Activity implements View.OnClickListener {
             String userPwd = mPwd.getText().toString().trim();
             SharedPreferences.Editor editor = login_sp.edit();
             int result = mUserDataManager.findUserByNameAndPwd(userName, userPwd);
-            if (result == -1) {
+             if (result == 1) {
                 editor.putString("USER_NAME", userName);
                 editor.putString("USER_PWD", userPwd);
                 if (mRememberCheck.isChecked()) {
@@ -93,6 +94,7 @@ public class Login extends Activity implements View.OnClickListener {
                 finish();
                 Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show();
             } else if (result == 0) {
+
                 Toast.makeText(this, getString(R.string.login_fail), Toast.LENGTH_SHORT).show();
 
             }

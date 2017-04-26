@@ -23,9 +23,9 @@ public class UserDataManager {
     private Context mContext = null;
 
     //创建用户user表
-    private static final String DB_CREATE = "CREATE TABLE " + TABLE_NAME + " ("
-            + ID + " integer primary key," + USER_NAME + " varchar,"
-            + USER_PWD + " varchar" + ");";
+//    public static final String DB_CREATE = "CREATE TABLE " + TABLE_NAME + " ("
+//            + ID + " integer primary key," + USER_NAME + " text,"
+//            + USER_PWD + " integer" + ");";
 
     private SQLiteDatabase mSQLiteDatabase = null;
     private DataBaseManagementHelper mDatabaseHelper = null;
@@ -44,11 +44,15 @@ public class UserDataManager {
     }
 
     //DataBaseManagementHelper继承自SQLiteOpenHelper
-    private static class DataBaseManagementHelper extends SQLiteOpenHelper {
+    public static class DataBaseManagementHelper extends SQLiteOpenHelper {
+        public static final String DB_CREATE = "CREATE TABLE " + TABLE_NAME + " ("
+                + ID + " integer primary key," + USER_NAME + " text,"
+                + USER_PWD + " integer" + ");";
 
-        DataBaseManagementHelper(Context context) {
+        public DataBaseManagementHelper(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
         }
+
 
         @Override
         public void onCreate(SQLiteDatabase db) {

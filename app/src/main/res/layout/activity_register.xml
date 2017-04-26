@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:hint="输入用户名"
+            android:hint="输入手机号"
             />
     </LinearLayout>
     <LinearLayout
