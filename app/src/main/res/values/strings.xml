@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ManagerDemo</string>
+    <string name="name_already_exist">用户已存在</string>
+    <string name="pwd_not_the_same">密码不一样，请重新输入</string>
+    <string name="register_fail" >注册失败！</string>
+    <string name="register_success">注册成功</string>
+    <string name="account_empty">用户名为空，请重新输入</string>
+    <string name="pwd_empty">密码为空，请重新输入</string>
+    <string name="pwd_again_empty">密码确认为空，请重新输入</string>
+    <string name="login_success">登录成功！</string>
+    <string name="login_fail">登录失败！</string>
 </resources>
