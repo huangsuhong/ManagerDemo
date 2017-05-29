@@ -1,8 +1,9 @@
 package com.example.cidjg.managerdemo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private Button mRegisterButton;                   //注册按钮
     private Button mLoginButton;                      //登录按钮
     private UserDataManager mUserDataManager;          //用户数据管理类
+    public static final int TYPE_NUMBER_VARIATION_PASSWORD = 0x00000010;
+    public static final int TYPE_CLASS_TEXT =  0x00000001;
+//    public interface  InputType{
+//        public static final int TYPE_NUMBER_VARIATION_PASSWORD = 0x00000010;
+//        public static final int TYPE_CLASS_TEXT =  0x00000001;
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +34,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         mRegisterSureButton = (Button) findViewById(R.id.register_btn_sure);
         mRegisterButton = (Button) findViewById(R.id.login_btn_register);
         mLoginButton = (Button) findViewById(R.id.register_btn_register);
+        mAccount.setInputType(android.text.InputType.TYPE_CLASS_TEXT);
+        mPwd.setInputType(InputType.TYPE_NUMBER_VARIATION_PASSWORD);
         mRegisterSureButton.setOnClickListener(this);
         mRegisterButton.setOnClickListener(this);
         mLoginButton.setOnClickListener(this);
@@ -55,6 +64,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 it.putExtra("mAccount", mAccount.getText().toString());
                 it.putExtra("mPwd", mPwd.getText().toString());
                 it.putExtra("mPwdAgain", mPwd_again.getText().toString());
+
                 break;
         }
     }

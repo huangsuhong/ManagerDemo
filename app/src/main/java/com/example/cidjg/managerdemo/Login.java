@@ -51,6 +51,7 @@ public class Login extends Activity implements View.OnClickListener {
         }
         mRegisterButton.setOnClickListener(this);
         mLoginButton.setOnClickListener(this);
+        mChangepwdText.setOnClickListener(this);
         if (mUserDataManager == null) {
             mUserDataManager = new UserDataManager(this);
             mUserDataManager.openDataBase();                              //建立本地数据库
@@ -61,14 +62,16 @@ public class Login extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login_btn_login:                            //登录界面的登录按钮
-//                Intent intent_Login_to_User = new Intent(Login.this, User.class);
-//               startActivity(intent_Login_to_User);
-//               finish();
                 login();
                 break;
             case R.id.login_btn_register:
                 Intent intent_login_to_register = new Intent(Login.this, Register.class);
                 startActivity(intent_login_to_register);
+                finish();
+                break;
+            case R.id.login_text_change_pwd:
+                Intent intent_Login_to_resetpwd = new Intent(Login.this, Resetpwd.class);
+                startActivity(intent_Login_to_resetpwd);
                 finish();
                 break;
         }
@@ -89,7 +92,7 @@ public class Login extends Activity implements View.OnClickListener {
                     editor.putBoolean("mRememberCheck", false);
                 }
                 editor.commit();
-                Intent intent = new Intent(Login.this, User.class);
+                Intent intent = new Intent(Login.this,ChoosePicture.class);
                 startActivity(intent);
                 finish();
                 Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show();

@@ -29,8 +29,9 @@
             android:id="@+id/resetpwd_edit_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+           android:inputType="text"
             android:textSize="25sp"
-            android:hint="输入手机号"
+            android:hint="输入用户名"
             />
     </LinearLayout>
     <LinearLayout
@@ -52,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
+          android:inputType="numberPassword"
             android:hint="输入用户名密码"
             />
     </LinearLayout>
@@ -61,6 +63,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:paddingTop="30dp"
+    android:inputType="numberPassword"
     android:hint="请确认您的密码"
     android:textSize="25sp"
     />
