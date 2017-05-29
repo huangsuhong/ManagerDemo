@@ -7,7 +7,7 @@ android:orientation="vertical">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="用户登录"
-    android:textSize="36sp"
+    android:textSize="30sp"
     android:layout_gravity="center"
     />
 <LinearLayout
@@ -21,13 +21,13 @@ android:orientation="vertical">
         android:text="账号："
         android:paddingLeft="30dp"
         android:paddingTop="60dp"
-        android:textSize="30sp"
+        android:textSize="20sp"
         />
     <EditText
         android:id="@+id/login_edit_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:hint="输入用户名"
         />
 </LinearLayout>
@@ -43,7 +43,7 @@ android:orientation="vertical">
         android:text="密码："
         android:paddingLeft="30dp"
         android:paddingTop="20dp"
-        android:textSize="30sp"
+        android:textSize="20sp"
         />
     <EditText
         android:id="@+id/login_edit_pwd"
@@ -87,14 +87,14 @@ android:orientation="vertical">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登录"
-        android:textSize="30sp"
+        android:textSize="25sp"
         />
     <Button
         android:id="@+id/login_btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="注册"
-        android:textSize="30sp"
+        android:textSize="25sp"
         />
 </LinearLayout>
 
